@@ -1,7 +1,8 @@
 
 
 module.exports = {
-    format: (arr) => {
+    format: (obj) => {
+        var arr = obj.secondary
         var nodes = {}
         var edges = []
 
