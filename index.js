@@ -12,7 +12,7 @@ var act = []
 var mov = []
 var sec = []
 
-const zadatak = "3"
+const zadatak = "18"
 
 csvToJson()
 .fromFile(secondaryPath)
