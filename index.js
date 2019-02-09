@@ -3,52 +3,49 @@ const secondaryPath ='csv/secondary.csv';
 const actorsPath ='csv/actors.csv';
 const moviesPath ='csv/movies.csv';
 const genresPath ='csv/genres.csv';
+const directorsPath ='csv/directors.csv';
 const csvToJson = require('csvtojson');
 const jsonToCsv = require('json-2-csv');
 const fs = require('fs');
 var path = require('path');
 var glob = require('glob');
 
+var prim = []
 var act = []
 var mov = []
-var sec = []
+var gen = []
 
-const zadatak = "0"
-
-// csvToJson()
-// .fromFile(secondaryPath)
-// .then(secondary => {
-//     sec = secondary
-//     return csvToJson()
-//         .fromFile(actorsPath)
-// }).then(actors => {
-//     act = actors
-//     return csvToJson()
-//         .fromFile(moviesPath)
-// }).then(movies => {
-//     mov = movies
-//     return csvToJson()
-//         .fromFile(genresPath)
-// }).then(genres => {
-//     var obj = {
-//         "secondary": sec,
-//         "actors": act,
-//         "movies": mov,
-//         "genres": genres
-//     };
-
-    // glob.sync(`./zadaci/${zadatak}/index.js`).forEach( function( file ) {
-    //     require(path.resolve(file)).format(obj).forEach((csv, index) => {    
-    //         printToCsv(csv, index+1);
-    //     })
-    // });
-// })
+const zadatak = "edge-directors-movies"
 
 csvToJson()
 .fromFile(primaryPath)
 .then(primary => {
+    prim = primary
+    return csvToJson()
+        .fromFile(actorsPath)
+}).then(actors => {
+    act = actors
+    return csvToJson()
+        .fromFile(moviesPath)
+}).then(movies => {
+    mov = movies
+    return csvToJson()
+        .fromFile(genresPath)
+}).then(genres => {
+    gen = genres
+    return csvToJson()
+        .fromFile(directorsPath)
+}).then(directors => {
+    var obj = {
+        "primary": prim,
+        "actors": act,
+        "movies": mov,
+        "genres": gen,
+        "directors": directors
+    };
+
     glob.sync(`./zadaci/${zadatak}/index.js`).forEach( function( file ) {
-        require(path.resolve(file)).format(primary).forEach((csv, index) => {    
+        require(path.resolve(file)).format(obj).forEach((csv, index) => {    
             printToCsv(csv, index+1);
         })
     });
@@ -57,7 +54,10 @@ csvToJson()
 function printToCsv(arr, index) {
     let f = function (err, csv) {
         if (err) throw err;
-        fs.writeFile(`zadaci/${zadatak}/output-${zadatak}-${index}.csv`, csv, 'utf8', function(err) {
+        var appender = ""
+        if (index != 1) appender = "-" + index
+
+        fs.writeFile(`zadaci/${zadatak}/${zadatak}${appender}.csv`, csv, 'utf8', function(err) {
           if (err) {
             console.log('Some error occured - file either not saved or corrupted file saved.');
           } else {
