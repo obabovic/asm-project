@@ -1,3 +1,4 @@
+const primaryPath ='csv/primary.csv';
 const secondaryPath ='csv/secondary.csv';
 const actorsPath ='csv/actors.csv';
 const moviesPath ='csv/movies.csv';
@@ -12,32 +13,42 @@ var act = []
 var mov = []
 var sec = []
 
-const zadatak = "18"
+const zadatak = "0"
+
+// csvToJson()
+// .fromFile(secondaryPath)
+// .then(secondary => {
+//     sec = secondary
+//     return csvToJson()
+//         .fromFile(actorsPath)
+// }).then(actors => {
+//     act = actors
+//     return csvToJson()
+//         .fromFile(moviesPath)
+// }).then(movies => {
+//     mov = movies
+//     return csvToJson()
+//         .fromFile(genresPath)
+// }).then(genres => {
+//     var obj = {
+//         "secondary": sec,
+//         "actors": act,
+//         "movies": mov,
+//         "genres": genres
+//     };
+
+    // glob.sync(`./zadaci/${zadatak}/index.js`).forEach( function( file ) {
+    //     require(path.resolve(file)).format(obj).forEach((csv, index) => {    
+    //         printToCsv(csv, index+1);
+    //     })
+    // });
+// })
 
 csvToJson()
-.fromFile(secondaryPath)
-.then(secondary => {
-    sec = secondary
-    return csvToJson()
-        .fromFile(actorsPath)
-}).then(actors => {
-    act = actors
-    return csvToJson()
-        .fromFile(moviesPath)
-}).then(movies => {
-    mov = movies
-    return csvToJson()
-        .fromFile(genresPath)
-}).then(genres => {
-    var obj = {
-        "secondary": sec,
-        "actors": act,
-        "movies": mov,
-        "genres": genres
-    };
-
+.fromFile(primaryPath)
+.then(primary => {
     glob.sync(`./zadaci/${zadatak}/index.js`).forEach( function( file ) {
-        require(path.resolve(file)).format(obj).forEach((csv, index) => {    
+        require(path.resolve(file)).format(primary).forEach((csv, index) => {    
             printToCsv(csv, index+1);
         })
     });
