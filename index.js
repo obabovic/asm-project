@@ -15,7 +15,7 @@ var act = []
 var mov = []
 var gen = []
 
-const zadatak = "secondary"
+const zadatak = "edge-years-movies"
 
 csvToJson()
 .fromFile(primaryPath)
