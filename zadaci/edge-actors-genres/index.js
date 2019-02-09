@@ -19,7 +19,7 @@ module.exports = {
                 if (nodes[genre] === undefined) nodes[genre] = []
 
                 actors.forEach(actor => {
-                    nodes[genre].push(actors)
+                    nodes[genre].push(actor)
                 });
             })
         });

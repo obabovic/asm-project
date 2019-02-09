@@ -7,7 +7,7 @@ module.exports = {
         var genres = {}
         var directors = {}
 
-        obj.forEach(row => {
+        obj.primary.forEach(row => {
             row.Actors.split(",").map(item => {
                 actors[item.trim()] = true;
             });

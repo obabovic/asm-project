@@ -24,16 +24,18 @@ module.exports = {
         });
 
         Object.keys(actorsMovies).sort().map(actor => {
-            actorsMovies[actor].forEach(movie => {
-                actorsMovies[actor].forEach(movie2 => {
-                    if (movie === movie2) return
-
-                    let source = (moviesYears[movie] > moviesYears[movie2]) ? movie: movie2
-                    let target = (moviesYears[movie] > moviesYears[movie2]) ? movie2: movie
+            for (let i = 0; i < actorsMovies[actor].length - 1; i++) {
+                const movie = actorsMovies[actor][i];
+                
+                for (let j = i+1; j < actorsMovies[actor].length; j++) {
+                    const movie2 = actorsMovies[actor][j];
+                    
+                    let source = (moviesYears[movie] < moviesYears[movie2]) ? movie: movie2
+                    let target = (moviesYears[movie] < moviesYears[movie2]) ? movie2: movie
                     
                     edgeMoviesMovies.push({"Source": source, "Target": target})
-                })
-            })
+                }
+            }
         })
 
         return [edgeMoviesMovies]
