@@ -1,0 +1,240 @@
+1. actors-actors
+Mark Wahlberg	Mark Wahlberg		42
+Hugh Jackman	Hugh Jackman		41
+Brad Pitt	Brad Pitt		37
+Christian Bale	Christian Bale		37
+Anne Hathaway	Anne Hathaway		33
+Channing Tatum	Channing Tatum		33
+
+2. actors-actors: 5.797
+
+3. actors-movies
+najproduktivniji, broj filmova -> modul klasa
+Mark Wahlberg	Mark Wahlberg		15 -> 3 (Thriller, mystery, crime, horror, Crime, Western)
+Hugh Jackman	Hugh Jackman		14 -> 2 (Drama, Biography, history, war, musical)
+Brad Pitt	Brad Pitt		13		   -> 2 
+Christian Bale	Christian Bale		13 -> 2
+Anne Hathaway	Anne Hathaway		12 -> 2
+Channing Tatum	Channing Tatum		12 -> 1 (Comedy, romance, family, animation)
+Johnny Depp	Johnny Depp		12		   -> 0 (Action, Adventure, Fantasy, Sci-Fi)
+
+pomoc: actors- genres
+Drama	Christian Bale	Undirected	35004			12.0
+Comedy	Seth Rogen	Undirected	33248			10.0
+Drama	Brad Pitt	Undirected	35052			10.0
+Action	Robert Downey Jr.	Undirected	30485			9.0
+Comedy	Adam Sandler	Undirected	33528			9.0
+Drama	Ryan Gosling	Undirected	34916			9.0
+Drama	Michael Fassbender	Undirected	34960			9.0
+Drama	Mark Wahlberg	Undirected	35036			9.0
+Action	Dwayne Johnson	Undirected	30562			8.0
+Action	Chris Hemsworth	Undirected	30583			8.0
+Action	Sharlto Copley	Undirected	30660			8.0
+Comedy	Anna Kendrick	Undirected	33224			8.0
+Comedy	Jonah Hill	Undirected	33250			8.0
+Comedy	Jennifer Aniston	Undirected	33252			8.0
+Comedy	Owen Wilson	Undirected	33392			8.0
+Drama	Jake Gyllenhaal	Undirected	34965			8.0
+Drama	Hugh Jackman	Undirected	35033			8.0
+Drama	Kristen Stewart	Undirected	35104			8.0
+Drama	Tom Hardy	Undirected	35112			8.0
+Drama	Cate Blanchett	Undirected	35257			8.0
+Drama	Naomi Watts	Undirected	35756			8.0
+Action	Vin Diesel	Undirected	30433			7.0
+Action	Chris Pine	Undirected	30500			7.0
+Action	Gerard Butler	Undirected	30604			7.0
+Action	Tom Cruise	Undirected	30668			7.0
+
+4. actor-genre, actor-director, actor-movie
+ grupacije se stvaraju na osnovu kriterijuma homofilije - zajednicki reziser, zajednicka godina, zajednicki zanr, ...
+
+5. actor-genre
+da, prilozena slika
+
+6. actor-genre - oni koji su glumili u najvise zanrova, tj, ciji je betweeness jak
+Chlo�� Grace Moretz	Chlo�� Grace Moretz		13	2	3.0	0.5007496251874063	0.5026613439787094	3139.9602243813765
+Brad Pitt	Brad Pitt		14	2	4.0	0.4995014955134596	0.502245508982036	3012.44285286564
+Scarlett Johansson	Scarlett Johansson		13	0	3.0	0.5007496251874063	0.5026613439787094	2998.5191759722334
+Jesse Eisenberg	Jesse Eisenberg		12	1	3.0	0.5004995004995005	0.5023286759813708	2916.1363017101726
+James McAvoy	James McAvoy		11	0	3.0	0.5002496255616575	0.5019960079840321	2768.753275456563
+Rose Byrne	Rose Byrne		11	1	4.0	0.4992526158445441	0.5014970059880242	2689.2125156151424
+Bradley Cooper	Bradley Cooper		11	2	4.0	0.49850746268656715	0.5011227544910182	2666.499639103905
+Elle Fanning	Elle Fanning		11	3	3.0	0.5002496255616575	0.5019960079840321	2592.849186984675
+Johnny Depp	Johnny Depp		13	0	4.0	0.4935960591133005	0.4990435795076515	2568.3371276118064
+Kate Beckinsale	Kate Beckinsale		10	0	3.0	0.5	0.5016633399866934	2544.0266300394906
+Naomi Watts	Naomi Watts		11	2	4.0	0.49702380952380953	0.5003742514970062	2528.43206711154
+Nicholas Hoult	Nicholas Hoult		10	0	4.0	0.49825957235206364	0.5007900864936795	2485.2267390382126
+Woody Harrelson	Woody Harrelson		10	3	4.0	0.49825957235206364	0.5007900864936795	2485.2267390382126
+Blake Lively	Blake Lively		10	2	3.0	0.5	0.5016633399866934	2467.493648948307
+Amanda Seyfried	Amanda Seyfried		11	1	4.0	0.4992526158445441	0.5014970059880242	2460.572502970966
+Amy Adams	Amy Adams		13	2	4.0	0.49262536873156343	0.4985445775116435	2403.1887883584054
+John C. Reilly	John C. Reilly		10	1	4.0	0.49850746268656715	0.5009148369926815	2322.1129876593263
+Julianne Moore	Julianne Moore		9	2	3.0	0.49975062344139654	0.5013306719893549	2252.598920277128
+Daniel Radcliffe	Daniel Radcliffe		10	0	4.0	0.49850746268656715	0.5009148369926815	2246.009148292702
+Josh Brolin	Josh Brolin		10	3	4.0	0.496777392166584	0.5000415834996675	2234.722771460765
+Sport	Sport		71	2	3.0	0.34250555460605026	0.35853293413174103	2186.0780339903936
+Will Smith	Will Smith		11	2	4.0	0.49311023622047245	0.4983782435129742	2141.253520195457
+Rachel Weisz	Rachel Weisz		12	2	4.0	0.49238329238329237	0.4982119095143049	2133.0583367091817
+Charlize Theron	Charlize Theron		12	0	4.0	0.491417361451692	0.4977129075182969	2103.4236704616765
+Dennis Quaid	Dennis Quaid		10	0	4.0	0.49383932971907346	0.49854457751164355	2098.509086583251
+Liam Neeson	Liam Neeson		12	0	4.0	0.49238329238329237	0.4982119095143049	2081.657642727223
+Jake Gyllenhaal	Jake Gyllenhaal		12	2	4.0	0.49238329238329237	0.4982119095143049	2063.60371470324
+Samuel L. Jackson	Samuel L. Jackson		10	0	4.0	0.4940828402366864	0.49866932801064556	2060.8467772590348
+
+actor-movie: nije toliko jasno grupisanje na osnovu filma samo
+actor-director: isto losa podela, koeficijent klasterizacije je 0
+
+7. actor-actor: 0.003
+genre-genre: 0.6
+movie-movie: usmerena gustina je 0.006, neusmerena je 0.012
+
+8.
+actor-actor: eigenvector slika, osnovna modularnost 0.627, uklanjanjem top 20% cvorova po pitanju degree-a, raste na 0.9, odnosno eksponencijalno. Koef. klasterizacije se linearno menja
+
+9. actor-actor: avg path len je 4.27, dijametar je 9
+
+10. actor-actor: 0.756
+
+11. actor-actor: avg degree 5.797, distribucija u slici, jeste power law
+
+12. treba da se uradi isti algoritam kao u prvom prolazu
+
+13. avg path len 3.77, ekscentricnost 7
+
+14. k-core sa 6 parametrom, slika je core, oni bi trebalo da su core
+sa druge strane, betweenness treba da ukazuje na to ko je a ko nije core
+Mark Wahlberg	0.026482897
+Channing Tatum	0.025788127
+Christian Bale	0.022547366
+Hugh Jackman	0.020767782
+Charlize Theron	0.01755271
+Sharlto Copley	0.016524996
+Matthew McConaughey	0.016513517
+Tom Hardy	0.015752563
+Brad Pitt	0.015329373
+Chlo�� Grace Moretz	0.015051278
+Anne Hathaway	0.014730722
+Jake Gyllenhaal	0.014664421
+Denzel Washington	0.014611499
+
+
+15. actors-genres, najcesci zanrovi po pitanju gde glumci najvise glume
+
+Id		Label		Degree
+Drama	Drama		1246
+Comedy	Comedy		744
+Action	Action		731
+Adventure	Adventure		675
+Thriller	Thriller		606
+
+
+genres-genres, najcesce kombinacije, i koliko puta su se desile
+
+Action	Adventure	155				
+Comedy	Drama	100				
+Drama	Romance	98				
+Crime	Drama	97				
+Drama	Thriller	80				
+Action	Sci-Fi	74				
+Biography	Drama	74				
+Action	Drama	72				
+Comedy	Romance	71				
+Adventure	Sci-Fi	59				
+Adventure	Comedy	59				
+Action	Thriller	54				
+Action	Crime	54				
+Adventure	Fantasy	52				
+Adventure	Drama	52				
+Drama	Mystery	52				
+						
+
+
+16. movies-movies
+
+BITNO - Source je stariji film u fransizi, Target je mladji
+
+Source			Target						Weight
+
+Transformers	Transformers: Revenge of the Fallen	4
+The Hunger Games: Mockingjay - Part 1	The Hunger Games: Mockingjay - Part 2	4
+Sex and the City	Sex and the City 2	4
+Olympus Has Fallen	London Has Fallen	4
+Harry Potter and the Half-Blood Prince	Harry Potter and the Deathly Hallows: Part 2	4
+Alice in Wonderland	Alice Through the Looking Glass	4
+X: First Class	X-Men: Apocalypse	3
+Transformers: Revenge of the Fallen	Transformers: Dark of the Moon	3
+Transformers	Transformers: Dark of the Moon	3
+Thor	Thor: The Dark World	3
+The Twilight Saga: Eclipse	The Twilight Saga: Breaking Dawn - Part 2	3
+The Twilight Saga: Eclipse	The Twilight Saga: Breaking Dawn - Part 1	3
+The Twilight Saga: Breaking Dawn - Part 1	The Twilight Saga: Breaking Dawn - Part 2	3
+The Maze Runner	Maze Runner: The Scorch Trials	3
+The Hunger Games: Catching Fire	The Hunger Games: Mockingjay - Part 2	3
+The Hunger Games: Catching Fire	The Hunger Games: Mockingjay - Part 1	3
+The Hunger Games	The Hunger Games: Mockingjay - Part 2	3
+The Hunger Games	The Hunger Games: Catching Fire	3
+The Hunger Games	The Hunger Games: Mockingjay - Part 1	3
+The Hobbit: The Desolation of Smaug	The Hobbit: The Battle of the Five Armies	3
+The Hobbit: An Unexpected Journey	The Hobbit: The Battle of the Five Armies	3
+The Hobbit: An Unexpected Journey	The Hobbit: The Desolation of Smaug	3
+The Expendables	The Expendables 3	3
+
+17. movies-movies
+grafici u png-u
+
+
+18. directors-movies
+Ridley Scott			8
+M. Night Shyamalan			6
+David Yates			6
+Paul W.S. Anderson			6
+Michael Bay			6
+Denis Villeneuve			5
+Christopher Nolan			5
+Antoine Fuqua			5
+Justin Lin			5
+J.J. Abrams			5
+
+19. actors-directors
+Ridley Scott	Russell Crowe	4
+Paul W.S. Anderson	Milla Jovovich	4
+Lars von Trier	Charlotte Gainsbourg	4
+Dennis Dugan	Adam Sandler	4
+David Yates	Daniel Radcliffe	4
+David Yates	Emma Watson	4
+David Yates	Rupert Grint	4
+Tim Burton	Johnny Depp	3
+Tim Burton	Helena Bonham Carter	3
+Peter Jackson	Martin Freeman	3
+Peter Jackson	Ian McKellen	3
+Peter Jackson	Richard Armitage	3
+Peter Berg	Mark Wahlberg	3
+Paul Feig	Melissa McCarthy	3
+Neill Blomkamp	Sharlto Copley	3
+Michael Bay	Shia LaBeouf	3
+Michael Bay	Josh Duhamel	3
+Michael Bay	Tyrese Gibson	3
+Martin Scorsese	Leonardo DiCaprio	3
+
+Ridley Scott	Russell Crowe	4
+Ridley Scott	Michael Fassbender	2
+Ridley Scott	Noomi Rapace	1
+Ridley Scott	Logan Marshall-Green	1
+Ridley Scott	Charlize Theron	1
+Ridley Scott	Matt Damon	1
+Ridley Scott	Jessica Chastain	1
+Ridley Scott	Kristen Wiig	1
+Ridley Scott	Kate Mara	1
+
+20. years-movies
+2016	2016		297
+2015	2015		127
+2014	2014		98
+2013	2013		91
+2012	2012		65
+2011	2011		63
+2010	2010		60
+2007	2007		53
+2008	2008		52
+2009	2009		51
+2006	2006		44
